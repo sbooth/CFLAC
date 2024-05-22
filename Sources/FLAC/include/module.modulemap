@@ -1,0 +1,24 @@
+module FLAC {
+	module FLAC {
+		header "FLAC/all.h"
+		header "FLAC/assert.h"
+		header "FLAC/callback.h"
+		header "FLAC/export.h"
+		header "FLAC/format.h"
+		header "FLAC/metadata.h"
+		header "FLAC/ordinals.h"
+		header "FLAC/stream_decoder.h"
+		header "FLAC/stream_encoder.h"
+		export *
+	}
+
+	module FLACPlusPlus {
+		requires cplusplus
+		header "FLAC++/all.h"
+		header "FLAC++/decoder.h"
+		header "FLAC++/encoder.h"
+		header "FLAC++/export.h"
+		header "FLAC++/metadata.h"
+		export *
+	}
+}
