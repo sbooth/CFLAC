@@ -48,10 +48,14 @@
 #endif
 
 /* Set to 1 if <arm_neon.h> has A64 instructions. */
-/* #undef FLAC__HAS_A64NEONINTRIN */
+#if __aarch64__
+#define FLAC__HAS_A64NEONINTRIN 1
+#endif
 
 /* Set to 1 if <arm_neon.h> is available. */
-#define FLAC__HAS_NEONINTRIN 0
+#if __aarch64__
+#define FLAC__HAS_NEONINTRIN 1
+#endif
 
 /* define if you have the ogg library */
 #define FLAC__HAS_OGG 1
@@ -86,7 +90,9 @@
 /* #undef GIT_COMMIT_TAG */
 
 /* Define to 1 if you have the <arm_neon.h> header file. */
-/* #undef HAVE_ARM_NEON_H */
+#if __aarch64__
+#define HAVE_ARM_NEON_H 1
+#endif
 
 /* Compiler has the __builtin_bswap16 intrinsic */
 #define HAVE_BSWAP16 1

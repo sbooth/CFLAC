@@ -46,21 +46,21 @@ void FLAC__lpc_compute_autocorrelation_intrin_neon_lag_14(const FLAC__real data[
 {
 #undef MAX_LAG
 #define MAX_LAG 14
-#include "deduplication/lpc_compute_autocorrelation_intrin_neon.c"
+#include "deduplication/lpc_compute_autocorrelation_intrin_neon.inc"
 }
 
 void FLAC__lpc_compute_autocorrelation_intrin_neon_lag_10(const FLAC__real data[], uint32_t data_len, uint32_t lag, double autoc[])
 {
 #undef MAX_LAG
 #define MAX_LAG 10
-#include "deduplication/lpc_compute_autocorrelation_intrin_neon.c"
+#include "deduplication/lpc_compute_autocorrelation_intrin_neon.inc"
 }
 
 void FLAC__lpc_compute_autocorrelation_intrin_neon_lag_8(const FLAC__real data[], uint32_t data_len, uint32_t lag, double autoc[])
 {
 #undef MAX_LAG
 #define MAX_LAG 8
-#include "deduplication/lpc_compute_autocorrelation_intrin_neon.c"
+#include "deduplication/lpc_compute_autocorrelation_intrin_neon.inc"
 }
 
 #endif /* ifdef FLAC__HAS_A64NEONINTRIN */
